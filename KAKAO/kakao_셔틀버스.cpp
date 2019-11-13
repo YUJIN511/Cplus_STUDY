@@ -62,10 +62,10 @@ string solution(int n, int t, int m, vector<string> timetable) {
 	int temp=0;
 	int pos = 0;
 
-	sort(timetable.begin(), timetable.end(), compare); // timetable Á¤·Ä
+	sort(timetable.begin(), timetable.end(), compare); // timetable ì •ë ¬
 
-	while(n-1!=0 ) { // nÈ¸
-		if (compare(time_cal(time, t),"00:00") || time_cal(time,t)=="00:00") { // ¸·Â÷ ½Ã°£
+	while(n-1!=0 ) { // níšŒ
+		if (compare(time_cal(time, t),"00:00") || time_cal(time,t)=="00:00") { // ë§‰ì°¨ ì‹œê°„
 			temp = 1;
 			if (m == 1 && timetable.at(pos - 1) == time) {
 				answer = time_cal(timetable.at(pos - 1), -1);
@@ -73,15 +73,15 @@ string solution(int n, int t, int m, vector<string> timetable) {
 			}
 			break;
 		}
-		for (int j = 0; j < m; j++) { // m¸í Å¾½Â
-			if (pos != timetable.size() && !compare(time, timetable.at(pos)) ) { // timeº¸´Ù ÀÛ°Å³ª °°À» ¶§ true
+		for (int j = 0; j < m; j++) { // mëª… íƒ‘ìŠ¹
+			if (pos != timetable.size() && !compare(time, timetable.at(pos)) ) { // timeë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì„ ë•Œ true
 				pos++;
 			}
 			else {
 				break;
 			}
 		}
-		//½Ã°£ Áõ°¡
+		//ì‹œê°„ ì¦ê°€
 
 		time = time_cal(time, t);
 		n--;
@@ -97,9 +97,9 @@ string solution(int n, int t, int m, vector<string> timetable) {
 		}
 		return time_cal(answer, t*(n - 1));
 	}
- // ¸¶Áö¸· ¹ö½º
-	for (int j = 0; j < m-1; j++) { // m¸í Å¾½Â
-		if (!compare(time, timetable.at(pos))) { // timeº¸´Ù ÀÛ°Å³ª °°À» ¶§ true
+ // ë§ˆì§€ë§‰ ë²„ìŠ¤
+	for (int j = 0; j < m-1; j++) { // mëª… íƒ‘ìŠ¹
+		if (!compare(time, timetable.at(pos))) { // timeë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì„ ë•Œ true
 			pos++;
 		}
 		else{
