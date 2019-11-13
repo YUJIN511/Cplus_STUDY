@@ -19,7 +19,7 @@ int solution(vector<int> food_times, long long k) {
 	while (k != 0) {
 
 		it->second -= 1;
-		if (it->second == 0) { // À½½ÄÀ» ´Ù ¸Ô¾úÀ» °æ¿ì
+		if (it->second == 0) { // Ã€Â½Â½Ã„Ã€Â» Â´Ã™ Â¸Ã”Â¾ÃºÃ€Â» Â°Ã¦Â¿Ã¬
 			d = it++;
 			pos.erase(d);
 		}
