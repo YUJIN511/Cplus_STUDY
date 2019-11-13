@@ -38,7 +38,7 @@ int main() {
 	vector<int> min;
 	cin >> N >> M;
 
-	for (int i = 0; i < N; i++) { // °ª ÀÔ·Â
+	for (int i = 0; i < N; i++) { // ê°’ ì…ë ¥
 		for (int j = 0; j < N; j++) {
 			cin >> house[i][j];
 			dis[i].push_back(INF);
@@ -49,7 +49,7 @@ int main() {
 	}
 
 	sum = 0;
-	if (v.size() > M) { // Ä¡Å²Áı °³¼ö°¡ ¸¹À» ¶§
+	if (v.size() > M) { // ì¹˜í‚¨ì§‘ ê°œìˆ˜ê°€ ë§ì„ ë•Œ
 		vector<int> com;
 
 		for (int i = 0; i < M; i++) {
@@ -59,11 +59,11 @@ int main() {
 			com.push_back(0);
 		}
 		sort(com.begin(), com.end());
-		// Á¶ÇÕ
+		// ì¡°í•©
 		do {
 			for (int i = 0; i < com.size(); i++) {
 				if (com[i] == 1) {
-					c_dis(v[i].first, v[i].second); // Ä¡Å²Áı °Å¸®
+					c_dis(v[i].first, v[i].second); // ì¹˜í‚¨ì§‘ ê±°ë¦¬
 				}
 			}
 			min.push_back(sum);
