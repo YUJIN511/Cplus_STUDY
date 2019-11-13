@@ -15,7 +15,7 @@ int time_cal(string S, double T) {
 
 	s += T;
 	if (s < 0) {
-		s = 60 + T; // ¼Ò¼öÁ¡ ¼ÂÂ°ÀÚ¸®±îÁö¸¸
+		s = 60 + T; // ì†Œìˆ˜ì  ì…‹ì§¸ìžë¦¬ê¹Œì§€ë§Œ
 		m--;
 	}
 	else if(s)
@@ -72,11 +72,11 @@ int solution(vector<string> lines) {
 
 	for (int i = 0; i < lines.size(); i++) {
 		for (int j = i + 1; j < lines.size(); j++) {
-			lines[i].substr(11, 12);// S:ÀÀ´ä¿Ï·á½Ã°£
-			lines[i].substr(24, lines.size()-25);//T:Ã³¸®½Ã°£
-			time_cal(lines[i].substr(11, 12), 0.999); // 1ÃÊ ÈÄ
+			lines[i].substr(11, 12);// S:ì‘ë‹µì™„ë£Œì‹œê°„
+			lines[i].substr(24, lines.size()-25);//T:ì²˜ë¦¬ì‹œê°„
+			time_cal(lines[i].substr(11, 12), 0.999); // 1ì´ˆ í›„
 
-			if (1) { // ±¸°£¿¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎ
+			if (1) { // êµ¬ê°„ì— ì¡´ìž¬í•˜ëŠ”ì§€ í™•ì¸
 
 
 			}
