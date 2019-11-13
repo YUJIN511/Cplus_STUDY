@@ -46,10 +46,10 @@ vector<string> solution(vector<string> record) {
 
 			name = m.at(op[1]);
 			if (op[0] == "Enter") {
-				answer.push_back(name + "´ÔÀÌ µé¾î¿Ô½À´Ï´Ù.");
+				answer.push_back(name + "ë‹˜ì´ ë“¤ì–´ì™”ìŠµë‹ˆë‹¤.");
 			}
 			else if (op[0] == "Leave") {
-				answer.push_back(name + "´ÔÀÌ ³ª°¬½À´Ï´Ù.");
+				answer.push_back(name + "ë‹˜ì´ ë‚˜ê°”ìŠµë‹ˆë‹¤.");
 			}
 
 			cout << answer[i] << endl;
