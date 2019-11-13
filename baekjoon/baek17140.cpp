@@ -41,12 +41,12 @@ void row_cal(int A[1001][101]) {
 		}
 		if (max < v.size() * 2) max = v.size() * 2;
 		sort(v.begin(), v.end(), myCom);
-		for (int j = 0; j < v.size(); j++) { //A Çà·Ä È®Àå
+		for (int j = 0; j < v.size(); j++) { //A í–‰ë ¬ í™•ìž¥
 			A[i][j * 2] = v[j].first;
 			A[i][j * 2 + 1] = v[j].second;
 		}
 		if (v.size() * 2 < c_max) {
-			for (int j = v.size()*2; j < max; j++) { //A Çà·Ä È®Àå
+			for (int j = v.size()*2; j < max; j++) { //A í–‰ë ¬ í™•ìž¥
 				A[i][j] =0;
 			}
 		}
@@ -83,12 +83,12 @@ void col_cal(int A[101][101]) {
 		}
 		if (max < v.size() * 2) max = v.size() * 2;
 		sort(v.begin(), v.end(), myCom);
-		for (int j = 0; j < v.size(); j++) { //A Çà·Ä È®Àå
+		for (int j = 0; j < v.size(); j++) { //A í–‰ë ¬ í™•ìž¥
 			A[j * 2][i] = v[j].first;
 			A[j * 2 + 1][i] = v[j].second;
 		}
 		if (v.size() * 2 < c_max) {
-			for (int j = v.size()*2; j < max; j ++) { //A Çà·Ä È®Àå
+			for (int j = v.size()*2; j < max; j ++) { //A í–‰ë ¬ í™•ìž¥
 				A[j][i] = 0;
 			}
 		}
@@ -100,11 +100,11 @@ void col_cal(int A[101][101]) {
 
 int main() {
 	
-	int A[101][101] = { { 0, } }; // A Çà·Ä 0À¸·Î ÃÊ±âÈ­
+	int A[101][101] = { { 0, } }; // A í–‰ë ¬ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 	int r, c, k;
 	int time = 0;
 	 
-	cin >> r; cin >> c; cin >> k; // °ª ÀÔ·Â
+	cin >> r; cin >> c; cin >> k; // ê°’ ìž…ë ¥
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
 			cin >> A[i][j];
@@ -112,12 +112,12 @@ int main() {
 	}
 	r_max = 3; c_max = 3;
 
-	while (A[r-1][c-1]!=k) { // k°¡ µÇ¸é ¹Ýº¹¹® Å»Ãâ
-		if (r_max >= c_max) { // Çà°ú ¿­ Å©±â ºñ±³
-			row_cal(A); // R¿¬»ê
+	while (A[r-1][c-1]!=k) { // kê°€ ë˜ë©´ ë°˜ë³µë¬¸ íƒˆì¶œ
+		if (r_max >= c_max) { // í–‰ê³¼ ì—´ í¬ê¸° ë¹„êµ
+			row_cal(A); // Rì—°ì‚°
 		}
 		else {
-			col_cal(A); // C¿¬»ê
+			col_cal(A); // Cì—°ì‚°
 		}
 		time++;
 		if (time > 100) {
