@@ -16,7 +16,7 @@ void DFS(int num) {
 	if (visit[arr[num]] == 0) {
 		DFS(arr[num]);
 	}
-	else if (check[arr[num]] == 0) { //Ã³À½ÀÎÁö È®ÀÎ
+	else if (check[arr[num]] == 0) { //ÃƒÂ³Ã€Â½Ã€ÃÃÃ¶ ÃˆÂ®Ã€Ã
 		set.push_back(num);
 		temp = arr[num];
 		while (temp != num) {
