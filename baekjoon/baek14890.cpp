@@ -11,11 +11,11 @@ int slop_x(vector<vector<int> >arr, vector<vector<int> >road, int N, int L) {
 	for (int i = 0; i < N; i++) {
 		count = 1;
 		for (int j = 0; j < N-1; j++) {
-			////////////°¡·Î
-			if (arr[i][j] == arr[i][j + 1]) { // °°Àº ³ôÀÌ
+			////////////ê°€ë¡œ
+			if (arr[i][j] == arr[i][j + 1]) { // ê°™ì€ ë†’ì´
 				count++;
 			}
-			else if (arr[i][j]-arr[i][j+1]==1) { // 1³·À»¶§
+			else if (arr[i][j]-arr[i][j+1]==1) { // 1ë‚®ì„ë•Œ
 				for (int k = 1; k < L; k++) {
 					if (j+1+k>N-1 || arr[i][j + 1] != arr[i][j + 1 + k]) {
 						goto EXIT;
@@ -25,7 +25,7 @@ int slop_x(vector<vector<int> >arr, vector<vector<int> >road, int N, int L) {
 				count += L;
 				j += L-1;
 			}
-			else if (arr[i][j]-arr[i][j+1]==-1) { // 1 ³ôÀ» ¶§
+			else if (arr[i][j]-arr[i][j+1]==-1) { // 1 ë†’ì„ ë•Œ
 				for (int k = 0; k < L; k++) {
 					if (j-k<0 || road[i][j - k] == 1) {
 						goto EXIT;
@@ -62,11 +62,11 @@ int slop_y(vector<vector<int> >arr, vector<vector<int> >road, int N, int L) {
 	for (int j = 0; j < N; j++) {
 		count = 1;
 		for (int i = 0; i < N - 1; i++) {
-			////////////¼¼·Î
-			if (arr[i][j] == arr[i+1][j]) { // °°Àº ³ôÀÌ
+			////////////ì„¸ë¡œ
+			if (arr[i][j] == arr[i+1][j]) { // ê°™ì€ ë†’ì´
 				count++;
 			}
-			else if (arr[i][j] - arr[i+1][j] == 1) { // 1³·À»¶§
+			else if (arr[i][j] - arr[i+1][j] == 1) { // 1ë‚®ì„ë•Œ
 				for (int k = 1; k < L; k++) {
 					if (i + 1 + k>N - 1 || arr[i+1][j] != arr[i+1+k][j]) {
 						goto EXIT;
@@ -76,7 +76,7 @@ int slop_y(vector<vector<int> >arr, vector<vector<int> >road, int N, int L) {
 				count += L;
 				i += L - 1;
 			}
-			else if (arr[i][j] - arr[i+1][j] == -1) { // 1 ³ôÀ» ¶§
+			else if (arr[i][j] - arr[i+1][j] == -1) { // 1 ë†’ì„ ë•Œ
 				for (int k = 0; k < L; k++) {
 					if (i-k<0 || road[i-k][j] == 1) {
 						goto EXIT;
@@ -114,13 +114,13 @@ int main() {
 	cin >> N >> L;
 
 	for (int i = 0; i < N; i++) {
-		vector<int> element(N); // N*N ¹è¿­ ¸¸µé±â
+		vector<int> element(N); // N*N ë°°ì—´ ë§Œë“¤ê¸°
 		road.push_back(element);
 		arr.push_back(element);
 		for (int j = 0; j < N; j++) { 
 			cin >> temp;
-			road[i][j] = 0; // ±æ ¹è¿­ ÀÔ·Â
-			arr[i][j] = temp;  // Áöµµ ¹è¿­ ÀÔ·Â
+			road[i][j] = 0; // ê¸¸ ë°°ì—´ ì…ë ¥
+			arr[i][j] = temp;  // ì§€ë„ ë°°ì—´ ì…ë ¥
 		}
 	}
 
