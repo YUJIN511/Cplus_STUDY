@@ -8,7 +8,7 @@ int board[101][101];
 
 int solution(int move[101][2]) {
 
-	int dx[5] = {0, 1,0,-1,0 }; // 1:¿ì 2:ÇÏ 3:ÁÂ 4:»ó
+	int dx[5] = {0, 1,0,-1,0 }; // 1:ìš° 2:í•˜ 3:ì¢Œ 4:ìƒ
 	int dy[5] = {0, 0,1,0,-1 };
 	int s_len = 1;
 	int hx = 1, hy = 1;
@@ -22,18 +22,18 @@ int solution(int move[101][2]) {
 
 	while (1) {
 		time++;
-		hx += dx[s_dir]; // ¹ì ¸Ó¸® ÀÌµ¿
+		hx += dx[s_dir]; // ë±€ ë¨¸ë¦¬ ì´ë™
 		hy += dy[s_dir];
-		if (hx > N || hy> N || hx<1 || hy<1 || board[hy][hx]>0) { // °ÔÀÓ ³¡
+		if (hx > N || hy> N || hx<1 || hy<1 || board[hy][hx]>0) { // ê²Œì„ ë
 			return time;
 		}
 		board[y][x] = s_dir;
 
-		if (board[hy][hx] == -1) { // »ç°ú ¸ÔÀº°æ¿ì
+		if (board[hy][hx] == -1) { // ì‚¬ê³¼ ë¨¹ì€ê²½ìš°
 			board[hy][hx] = 0;
 			s_len++;
 		}
-		else { // ¾È¸ÔÀº °æ¿ì
+		else { // ì•ˆë¨¹ì€ ê²½ìš°
 			temp = board[ty][tx];
 			board[ty][tx] = 0;
 			tx += dx[temp];
@@ -43,12 +43,12 @@ int solution(int move[101][2]) {
 		x = hx;
 		y = hy;
 
-		if (m<L && move[m][0] == time) { // ¹æÇâ ¹Ù²Ù±â
-			if (move[m][1] == 1) { // ¿À¸¥ÂÊ 90µµ
+		if (m<L && move[m][0] == time) { // ë°©í–¥ ë°”ê¾¸ê¸°
+			if (move[m][1] == 1) { // ì˜¤ë¥¸ìª½ 90ë„
 				s_dir++;
 				if (s_dir == 5) s_dir = 1;
 			}
-			else { // ¿ŞÂÊ 90µµ
+			else { // ì™¼ìª½ 90ë„
 				s_dir--;
 				if (s_dir == 0) s_dir = 4;
 			}
@@ -62,7 +62,7 @@ int main() {
 	int K;
 	int x, y;
 	char temp;
-	int move[101][2]; // D´Â 1, LÀº 0
+	int move[101][2]; // DëŠ” 1, Lì€ 0
 
 	cin >> N;
 	cin >> K;
