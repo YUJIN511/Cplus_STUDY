@@ -7,8 +7,8 @@ int main() {
 	int INF = 100001;
 	int city[103][103] = {0,};
 	int temp[3];
-	cin >> N; // µµ½Ã °³¼ö
-	cin >> M; // ¹ö½º °³¼ö
+	cin >> N; // ÂµÂµÂ½Ãƒ Â°Â³Â¼Ã¶
+	cin >> M; // Â¹Ã¶Â½Âº Â°Â³Â¼Ã¶
 	
 
 	for (int i = 1; i <= N; i++) {
@@ -19,7 +19,7 @@ int main() {
 		}
 	}
 
-	for (int i = 0; i < M; i++) { // ÀÔ·Â
+	for (int i = 0; i < M; i++) { // Ã€Ã”Â·Ã‚
 		cin >> temp[0];
 		cin >> temp[1];
 		cin >> temp[2];
