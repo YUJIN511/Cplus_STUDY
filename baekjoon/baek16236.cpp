@@ -11,7 +11,7 @@ void babyshark(int arr[20][20], int num) {
 	int visit[20][20] = { 0 };
 	for (int i = 0; i < num; i++) {
 		for (int j = 0; j < num; j++) {
-			if (arr[i][j] == 9) { // ¾Æ±â»ó¾î À§Ä¡
+			if (arr[i][j] == 9) { // ì•„ê¸°ìƒì–´ ìœ„ì¹˜
 				x = j;
 				y = i;
 				break;
@@ -21,7 +21,7 @@ void babyshark(int arr[20][20], int num) {
 	
 	for (int i = 0; i < num; i++) {
 		for (int j = 0; j < num; j++) {
-			if (arr[i][j] != 0 && shark > arr[i][j]) { // ¾Æ±â»ó¾îº¸´Ù ÀÛÀº ¹°°í±â
+			if (arr[i][j] != 0 && shark > arr[i][j]) { // ì•„ê¸°ìƒì–´ë³´ë‹¤ ì‘ì€ ë¬¼ê³ ê¸°
 				temp_i = y;
 				temp_j = x;
 
