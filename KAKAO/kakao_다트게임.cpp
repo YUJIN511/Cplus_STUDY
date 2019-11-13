@@ -29,27 +29,27 @@ int solution(string dartResult) {
 			power = 3;
 		}
 
-		if (dartResult[pos + 2] == '*') { // ½ºÅ¸»ó Á¸Àç?
-			if (pos + 3 < dartResult.size() && dartResult.find("*", pos + 3) < pos+6) { // ½ºÅ¸»ó ÁßÃ¸
+		if (dartResult[pos + 2] == '*') { // ìŠ¤íƒ€ìƒ ì¡´ìž¬?
+			if (pos + 3 < dartResult.size() && dartResult.find("*", pos + 3) < pos+6) { // ìŠ¤íƒ€ìƒ ì¤‘ì²©
 				answer += pow(point,power) * 4;
 			}
-			else { // ³ë ÁßÃ¸
+			else { // ë…¸ ì¤‘ì²©
 				answer += pow(point, power) * 2;
 			}
 		}
-		else if (dartResult[pos + 2] == '#') { // ¾ÆÂ÷»ó Á¸Àç?
-			if (pos + 3 < dartResult.size() && dartResult.find("*", pos + 3) < pos+6) { // ½ºÅ¸»ó ÁßÃ¸
+		else if (dartResult[pos + 2] == '#') { // ì•„ì°¨ìƒ ì¡´ìž¬?
+			if (pos + 3 < dartResult.size() && dartResult.find("*", pos + 3) < pos+6) { // ìŠ¤íƒ€ìƒ ì¤‘ì²©
 				answer += pow(point, power) * -2;
 			}
-			else { // ³ë ÁßÃ¸
+			else { // ë…¸ ì¤‘ì²©
 				answer += pow(point, power) * -1;
 			}
 		}
-		else { // ³ë¿É¼Ç
-			if (pos + 3 < dartResult.size() && dartResult.find("*", pos + 3) < pos+6) { // ½ºÅ¸»ó ÁßÃ¸
+		else { // ë…¸ì˜µì…˜
+			if (pos + 3 < dartResult.size() && dartResult.find("*", pos + 3) < pos+6) { // ìŠ¤íƒ€ìƒ ì¤‘ì²©
 				 answer += pow(point, power) * 2;
 			}
-			else { // ³ë ÁßÃ¸
+			else { // ë…¸ ì¤‘ì²©
 				answer += pow(point, power);
 			}
 			pos -= 1;
